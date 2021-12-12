@@ -1,8 +1,13 @@
 package leetcode.dynamicprogramming;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Stack;
 
 /**
+ * https://leetcode.com/problems/counting-bits/
+ *
  * Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n),
  * ans[i] is the number of 1's in the binary representation of i.
  *
@@ -31,8 +36,9 @@ import java.util.Arrays;
 public class CountingBits338 {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(easyCountBits(20)));
-        System.out.println(Arrays.toString(dpCountBits(20)));
+        System.out.println(Arrays.toString(easyCountBits(10)));
+        System.out.println(Arrays.toString(dpCountBits(10)));
+        System.out.println(Arrays.toString(dpCountBits2(10)));
 
     }
 
@@ -40,20 +46,53 @@ public class CountingBits338 {
         int[] countedBits = new int[n+1];
 
         for(int i = 0; i <= n; i++){
-            String binary = Integer.toBinaryString(i);
             countedBits[i] = Integer.bitCount(i);
         }
         return countedBits;
     }
 
     public static int[] dpCountBits(int n) {
+
+        Map<String, Integer> dpMap = new HashMap<>();
         int[] countedBits = new int[n+1];
+
+        Stack<String> bits = new Stack<>();
 
         for(int i = 0; i <= n; i++){
             String binary = Integer.toBinaryString(i);
 
+            bits.push(binary);
+            while(!bits.isEmpty()){
+                String current = bits.pop();
 
+                if(current.charAt(0) == '1') countedBits[i]++;
+
+                if(current.length() > 1){
+                    String next = current.substring(1);
+                    if(dpMap.containsKey(next)){
+                        countedBits[i] += dpMap.get(next);
+                    }
+                    else{
+                        bits.push(next);
+                    }
+                }
+            }
+            dpMap.put(binary, countedBits[i]);
         }
         return countedBits;
+    }
+
+    // https://leetcode.com/problems/counting-bits/discuss/1076717/How-to-arrive-at-the-DP-Solution-for-this-problem
+    public static int[] dpCountBits2(int n){
+        int[] result = new int[n+1];
+        result[1] = 1;
+
+        int k = 0;
+        for(int i = 2; i <= n; i++){
+            if(i == Math.pow(2, k+1)) k++;
+
+            result[i] = 1 + result[(int)(i - Math.pow(2, k))];
+        }
+        return result;
     }
 }
