@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 // Problem: Jaden Casing Strings
 public class JadenCase {
 
+	private JadenCase(){}
+	
 	public static String toJadenCase(String phrase) {
     
 		if(phrase == null || phrase.isBlank()) return null;

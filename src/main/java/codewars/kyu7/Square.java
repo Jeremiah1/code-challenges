@@ -4,6 +4,8 @@ package codewars.kyu7;
 // Problem: You're A Square
 public class Square {
     
+    private Square(){}
+    
     public static boolean isSquare(int n){
         if(n < 0) return false;
 
