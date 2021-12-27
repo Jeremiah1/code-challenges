@@ -4,30 +4,28 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-public class JadenCaseTest {
-
-    JadenCase jadenCase = new JadenCase();
+class JadenCaseTest {
 
     @Test
-	public void givenNonEmptyString_thenReturnJadenCase() {
+	void givenNonEmptyString_thenReturnJadenCase() {
         String given = "most trees are blue";
         String expected = "Most Trees Are Blue";
 
-        String actual = jadenCase.toJadenCase(given);
+        String actual = JadenCase.toJadenCase(given);
         assertThat(actual).isEqualTo(expected);
 	}
 
     @Test
-    public void givenNullString_thenReturnNull(){
+    void givenNullString_thenReturnNull(){
 
-        String result = jadenCase.toJadenCase(null);
+        String result = JadenCase.toJadenCase(null);
         assertThat(result).isNull();
     }
 
     @Test
-    public void givenEmptyString_thenReturnNull(){
+    void givenEmptyString_thenReturnNull(){
 
-        String result = jadenCase.toJadenCase("");
+        String result = JadenCase.toJadenCase("");
         assertThat(result).isNull();
     }
 }
