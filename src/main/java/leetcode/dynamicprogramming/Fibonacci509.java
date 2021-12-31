@@ -19,20 +19,20 @@ class Fibonacci509 {
         return fibNums[n];
     }
 
-    public static int fibRecursion(int n) {
+    public static int fibonacciMemoization(int n) {
 
         int[] fibNums = new int[Math.max(2, n+1)];
 
-        return fibMemoization(fibNums, n);
+        return fibonacciRecursion(fibNums, n);
     }
 
-    private static int fibMemoization(int[] fibNums, int n){
+    private static int fibonacciRecursion(int[] fibNums, int n){
 
         if(n == 0) return 0;
         if(n == 1) return 1;
 
-        int a = (fibNums[n-1] > 0) ? fibNums[n-1] : fibMemoization(fibNums, n-1);
-        int b = (fibNums[n-2] > 0) ? fibNums[n-2] : fibMemoization(fibNums, n-2);
+        int a = (fibNums[n-1] > 0) ? fibNums[n-1] : fibonacciRecursion(fibNums, n-1);
+        int b = (fibNums[n-2] > 0) ? fibNums[n-2] : fibonacciRecursion(fibNums, n-2);
 
         fibNums[n] = a + b;
         return a + b;

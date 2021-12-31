@@ -29,17 +29,17 @@ class Fibonacci509Test {
     void givenWholeNumberN_thenReturnNthFibonacciNumberWithMemoizedRecursion() {
         
         int given = 4;
-        int result = Fibonacci509.fibRecursion(given);
+        int result = Fibonacci509.fibonacciMemoization(given);
         int expected = 3;
         assertThat(result).isEqualTo(expected);
         
         given = 10;
-        result = Fibonacci509.fibRecursion(given);
+        result = Fibonacci509.fibonacciMemoization(given);
         expected = 55;
         assertThat(result).isEqualTo(expected);
 
         given = 12;
-        result = Fibonacci509.fibRecursion(given);
+        result = Fibonacci509.fibonacciMemoization(given);
         expected = 144;
         assertThat(result).isEqualTo(expected);
     }
@@ -50,6 +50,9 @@ class Fibonacci509Test {
         int given = 0;
         int result = Fibonacci509.fib(given);
         assertThat(result).isZero();
+
+        result = Fibonacci509.fibonacciMemoization(given);
+        assertThat(result).isZero();
     }
 
     @Test
@@ -58,6 +61,9 @@ class Fibonacci509Test {
         int given = 1;
         int result = Fibonacci509.fib(given);
         int expected = 1;
+        assertThat(result).isEqualTo(expected);
+
+        result = Fibonacci509.fibonacciMemoization(given);
         assertThat(result).isEqualTo(expected);
     }
 }
