@@ -19,7 +19,7 @@ public class HouseRobber198 {
         sum[0] = money[0];
         if(n == 1) return sum[0];
 
-        sum[1] = Math.max(sum[0],money[1]);
+        sum[1] = Math.max(sum[0], money[1]);
         if(n == 2) return sum[1];
 
         for(int i = 2; i < n; i++){
