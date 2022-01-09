@@ -4,7 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-public class Tribonacci1137Test {
+class Tribonacci1137Test {
 
     @Test
     void givenWholeNumberN_thenReturnNthTribonacciNumber() {

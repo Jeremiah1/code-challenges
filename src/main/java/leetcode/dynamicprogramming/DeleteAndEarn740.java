@@ -1,14 +1,5 @@
 package leetcode.dynamicprogramming;
 
-import static java.util.function.Function.identity;
-import static java.util.stream.Collectors.counting;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 // https://leetcode.com/problems/delete-and-earn/
 // Problem 740: Delete and Earn
 public class DeleteAndEarn740 {
