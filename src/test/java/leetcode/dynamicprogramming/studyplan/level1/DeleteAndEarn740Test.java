@@ -3,8 +3,6 @@ package leetcode.dynamicprogramming.studyplan.level1;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import leetcode.dynamicprogramming.studyplan.level1.DeleteAndEarn740;
-
 class DeleteAndEarn740Test {
 
     @Test

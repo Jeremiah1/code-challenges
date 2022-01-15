@@ -4,8 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import leetcode.dynamicprogramming.studyplan.level1.Tribonacci1137;
-
 class Tribonacci1137Test {
 
     @Test

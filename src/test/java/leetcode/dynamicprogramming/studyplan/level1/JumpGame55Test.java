@@ -4,8 +4,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import leetcode.dynamicprogramming.studyplan.level1.JumpGame55;
-
 class JumpGame55Test {
 
     @Test
