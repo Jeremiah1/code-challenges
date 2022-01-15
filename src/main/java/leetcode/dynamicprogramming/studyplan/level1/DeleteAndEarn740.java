@@ -1,4 +1,4 @@
-package leetcode.dynamicprogramming;
+package leetcode.dynamicprogramming.studyplan.level1;
 
 // https://leetcode.com/problems/delete-and-earn/
 // Problem 740: Delete and Earn

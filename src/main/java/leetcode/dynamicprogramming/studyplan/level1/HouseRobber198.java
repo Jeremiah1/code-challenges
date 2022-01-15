@@ -1,4 +1,4 @@
-package leetcode.dynamicprogramming;
+package leetcode.dynamicprogramming.studyplan.level1;
 
 import java.util.ArrayList;
 import java.util.Arrays;

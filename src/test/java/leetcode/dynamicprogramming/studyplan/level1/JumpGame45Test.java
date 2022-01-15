@@ -1,8 +1,10 @@
-package leetcode.dynamicprogramming;
+package leetcode.dynamicprogramming.studyplan.level1;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
+
+import leetcode.dynamicprogramming.studyplan.level1.JumpGame45;
 
 class JumpGame45Test {
 

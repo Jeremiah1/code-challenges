@@ -1,4 +1,4 @@
-package leetcode.dynamicprogramming;
+package leetcode.dynamicprogramming.studyplan.level1;
 
 // https://leetcode.com/problems/house-robber-ii/
 // Problem 213: House Robber II

@@ -1,4 +1,4 @@
-package leetcode.dynamicprogramming;
+package leetcode.dynamicprogramming.studyplan.level1;
 
 // https://leetcode.com/problems/maximum-subarray/
 // Problem 53: Maximum Subarray

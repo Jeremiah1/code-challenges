@@ -1,4 +1,4 @@
-package leetcode.dynamicprogramming;
+package leetcode.dynamicprogramming.studyplan.level1;
 
 // https://leetcode.com/problems/fibonacci-number/
 // Problem 509: Fibonacci Number

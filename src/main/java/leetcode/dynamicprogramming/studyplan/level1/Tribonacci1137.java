@@ -1,4 +1,4 @@
-package leetcode.dynamicprogramming;
+package leetcode.dynamicprogramming.studyplan.level1;
 
 // https://leetcode.com/problems/n-th-tribonacci-number/
 // Problem 1137: N-th Tribonacci Number

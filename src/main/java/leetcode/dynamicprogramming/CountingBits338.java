@@ -1,9 +1,10 @@
 package leetcode.dynamicprogramming;
 
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
-import java.util.Stack;
 
 /**
  * https://leetcode.com/problems/counting-bits/
@@ -56,7 +57,7 @@ public class CountingBits338 {
         Map<String, Integer> dpMap = new HashMap<>();
         int[] countedBits = new int[n+1];
 
-        Stack<String> bits = new Stack<>();
+        Deque<String> bits = new LinkedList<>();
 
         for(int i = 0; i <= n; i++){
             String binary = Integer.toBinaryString(i);
