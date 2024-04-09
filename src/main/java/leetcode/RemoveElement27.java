@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.Arrays;
-
 // https://leetcode.com/problems/remove-element/
 // Problem 27: Remove Element
 public class RemoveElement27 {
